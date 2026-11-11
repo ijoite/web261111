@@ -1,3 +1,6 @@
+// data.js : 내 영화 5편 데이터 / 박희성 / 11주차
+// 영화 한 편 = 객체 하나. 키 5개 : title, year, date, rating, poster
+
 const movies = [
     {
         title: "인터스텔라",
@@ -33,5 +36,12 @@ const movies = [
         date: "2009-12-15",
         rating: 7.61,
         poster: "/m5lCha2XcbDowDoYHPc0DTNaCPU.jpg"
+    },
+    {
+        title: "암살자(들)",
+        year: 2026,
+        date: "2026-09-23",
+        rating: 7.2,
+        poster: "/c55ijsOdntj6P25vDwHLdgsBpmV.jpg"
     }
 ];

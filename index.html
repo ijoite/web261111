@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내 영화 보드(박희성)</title>
+    <title>내 영화 보드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,8 @@
         <h1>내 영화 보드</h1>
         <nav>
             <ul>
-                <li><a href="#board">보드</a></li>
+                <li><a href="#mine">내 인생 영화</a></li>
+                <li><a href="#boxoffice">박스오피스</a></li>
                 <li><a href="#about">소개</a></li>
                 <li><a href="detail.html">상세</a></li>
             </ul>
@@ -30,71 +32,85 @@
 
 
     <main>
-        <section class="board" id="board">
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w500/gDN2NWtHbs8ZWEBQM8Dh5OVXdb4.jpg"
-                    alt="영화 제목 포스터">
-                <BR><span class="badge">8.49</span>
-                <div class="info">
-                    <h2>인터스텔라</h2>
-                    <p class="year">2014</p>
-                    <p class="overview">세계 각국의 정부와 경제가 완전히 붕괴된 미래가 다가온다. 지난 20세기에 범한 잘못이 전 세계적인 식량 부족을 불러왔고, NASA도
-                        해체되었다. 나사 소속
-                        우주비행사였던 쿠퍼는 지구에 몰아친 식량난으로 옥수수나 키우며 살고 있다. 거센 황사가 몰아친 어느 날 알 수 없는 힘에 이끌려 딸과 함께 도착한 곳은 인류가 이주할 행성을
-                        찾는 나사의
-                        비밀본부. 이 때 시공간에 불가사의한 틈이 열리고, 이 곳을 탐험해 인류를 구해야 하는 임무를 위해 쿠퍼는 만류하는 딸을 뒤로한 채 우주선에 탑승하는데...</p>
-                </div>
-            </article>
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w500/8ze9OcVuFiy94s6FFPvsn4oC2e1.jpg"
-                    alt="영화 제목 포스터">
-                <BR><span class="badge">8.01</span>
-                <div class="info">
-                    <h2>오디세이</h2>
-                    <p class="year">2026</p>
-                    <p class="overview">10년간 이어진 트로이 전쟁을 승리로 이끈 영웅 '오디세우스'는 왕의 부재를 틈타 침탈과 권력 다툼이 벌어진 왕국에서 그를 기다리고 있는 아내
-                        '페넬로페'와 아들 '텔레마코스'에게 돌아가기 위한 여정에 나선다. 그러나 신들의 분노를 산 그의 귀환 앞에는 거대한 폭풍과 괴물들, 그리고 거스를 수 없는 운명의 시련이
-                        기다리고 있는데…</p>
-                </div>
-            </article>
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w500/cuQdgDYANbKA46e4va2fz6fODkc.jpg"
-                    alt="영화 제목 포스터">
-                <BR><span class="badge">7.2</span>
-                <div class="info">
-                    <h2>분노의 질주: 더 세븐</h2>
-                    <p class="year">2015</p>
-                    <p class="overview">도미닉과 멤버들은 범죄조직 소탕 후 모든 전과를 사면 받고 평범한 일상으로 돌아간다. 하지만 평화도 잠시, 전작에서 처리한 범죄조직의 리더 오웬
-                        쇼의 형 데카드 쇼가 동생의 복수를 위해 멤버들을 차례로 공격한다. 특수부대 출신 용병 데카드 쇼의 난입으로 한이 갑작스레 사망하게 되고, 도미닉의 집은 순식간에
-                        폭파당한다. 이에 맞서는 정부요원 페티는 도미닉을 돕는 조건으로 납치당한 해커 램지의 구출을 의뢰하고, 도미닉은 멤버들을 다시 모아 숨막히는 반격을 시작한다.</p>
-                </div>
-            </article>
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w500/zRvMTCzUVnkdW9lno9HQwrigWSr.jpg"
-                    alt="영화 제목 포스터">
-                <BR><span class="badge">8.49</span>
-                <div class="info">
-                    <h2>스타워즈 에피소드 8: 라스트 제다이</h2>
-                    <p class="year">2017</p>
-                    <p class="overview">악의 세력인 무자비한 퍼스트 오더가 은하계를 장악한 시대. 레아 장군의 저항군은 힘겨운 싸움을 이어가고 있다. 그들의 유일한 희망은 마지막
-                        제다이 루크 스카이워커. 저항군은 승리의 불씨를 지필 마지막 희망을 찾아 레이를 과거의 영웅 루크에게 보낸다. 레이는 우여곡절 끝에 루크를 찾아내지만, 자신의 잘못으로
-                        레아의 아들 벤 솔로가 퍼스트 오더의 실세 카일로 렌이 되었다고 생각하는 루크는 함께 떠나자는 레이의 제안을 거절한다. 한편 레이는 알 수 없는 이유로 카일로 렌과 교감할
-                        수 있게 된다.</p>
-                </div>
-            </article>
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w500/m5lCha2XcbDowDoYHPc0DTNaCPU.jpg"
-                    alt="영화 제목 포스터">
-                <BR><span class="badge">7.61</span>
-                <div class="info">
-                    <h2>아바타</h2>
-                    <p class="year">2009</p>
-                    <p class="overview">가까운 미래, 지구는 에너지 고갈 문제를 해결하기 위해 머나먼 행성 판도라에서 대체 자원을 채굴하기 시작한다. 하지만 판도라의 독성을 지닌
-                        대기로 인해 자원 획득에 어려움을 겪게 된 인류는 판도라의 토착민 나비의 외형에 인간의 의식을 주입, 원격 조종이 가능한 새로운 생명체를 탄생시키는 프로그램을 개발한다.
-                        한편 하반신이 마비된 전직 해병대원 제이크 설리는 아바타 프로그램에 참가할 것을 제안받는다. 그 곳에서 자신의 아바타를 통해 자유롭게 걸을 수 있게 된 제이크는 자원 채굴을
-                        막으려는 나비의 무리에 침투하라는 임무를 부여받는데...</p>
-                </div>
-            </article>
+        <section id="mine">
+            <div class="toolbar">
+                <p id="count"></p>
+                <label for="sort">정렬</label>
+                <select id="sort" onchange="applySort()">
+                    <option value="rating">평점순</option>
+                    <option value="year">최신 개봉순</option>
+                    <option value="title">제목순</option>
+                </select>
+            </div>
+            <div class="board">
+
+            </div>
+        </section>
+        <section id="boxoffice">
+            <h2>일별 박스오피스 TOP 5</h2>
+            <p class="basis">KOBIS 기준일 2026-10-26</p>
+            <div class="board">
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/5TMyytCI5Pfc9c1eNsljiCdiB05.jpg"
+                        alt="극장판 치이카와: 인어 섬의 비밀 포스터">
+                    <span class="rank">1</span>
+                    <span class="badge">7.4</span>
+                    <div class="info">
+                        <h3>극장판 치이카와: 인어 섬의 비밀</h3>
+                        <p class="year">개봉 2026-09-30</p>
+                        <p class="audience">누적 2,268,257명</p>
+                        <p class="change">-</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/c55ijsOdntj6P25vDwHLdgsBpmV.jpg"
+                        alt="암살자(들) 포스터">
+                    <span class="rank">2</span>
+                    <span class="badge">7.2</span>
+                    <div class="info">
+                        <h3>암살자(들)</h3>
+                        <p class="year">개봉 2026-09-23</p>
+                        <p class="audience">누적 3,382,043명</p>
+                        <p class="change">-</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/wkm9BQLok7U2KihcCspCa663Qse.jpg"
+                        alt="실낙원 포스터">
+                    <span class="rank">3</span>
+                    <span class="badge">8.0</span>
+                    <div class="info">
+                        <h3>실낙원</h3>
+                        <p class="year">개봉 2026-10-21</p>
+                        <p class="audience">누적 112,191명</p>
+                        <p class="change">-</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/ueigb5zra1tj6FTK9yhh2P33P9B.jpg"
+                        alt="타짜: 벨제붑의 노래 포스터">
+                    <span class="rank">4</span>
+                    <span class="badge">7.0</span>
+                    <div class="info">
+                        <h3>타짜: 벨제붑의 노래</h3>
+                        <p class="year">개봉 2026-09-23</p>
+                        <p class="audience">누적 2,006,478명</p>
+                        <p class="change">-</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/LSGpoSAlitss0KOvVakkeUToZo.jpg"
+                        alt="클레이페이스 포스터">
+                    <span class="rank">5</span>
+                    <span class="badge">7.46</span>
+                    <div class="info">
+                        <h3>클레이페이스</h3>
+                        <p class="year">개봉 2026-10-21</p>
+                        <p class="audience">누적 84,196명</p>
+                        <p class="change">-</p>
+                    </div>
+                </article>
+            </div>
         </section>
         <section id="about">
             <h2>이 보드에 대하여</h2>
@@ -106,9 +122,10 @@
         <p>이 사이트는 TMDB API를 사용하지만 TMDB의 보증이나 인증을 받지 않았습니다.
             This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
         <p>포스터와 영화 정보: TMDB (https://www.themoviedb.org)</p>
+        <p>박스오피스 데이터: 영화진흥위원회 영화관입장권통합전산망(KOBIS), 기준일 2026-10-26</p>
     </footer>
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
