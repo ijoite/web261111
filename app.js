@@ -1,15 +1,16 @@
 // app.js : 영화 배열을 다루는 함수 6개 / 박희성 / 11주차
 // average : 영화 배열 ⇒ 평균 평점(숫자)
 
-function average(list) {
+const average = (list) => {
     let sum = 0;
     for (const m of list) {
         sum = sum + m.rating;
     }
     return sum / list.length;
 }
+console.log("평균:", average(movies));
 
-function best(list) {
+const best = list => {
     let top = list[0];
     for (const m of list) {
         if (m.rating > top.rating) {
@@ -18,35 +19,34 @@ function best(list) {
     }
     return top;
 }
+console.log("최고:", best(movies).title);
 
-function filterByRating(list, min) {
+const filterByRating = (list, min) => {
     return list.filter(m => m.rating >= min);
 }
-
-function sortByRating(list) {
-    return [...list].sort((a, b) => b.rating - a.rating);
-}
-
-function yearsSince(dateStr) {
-    return new Date().getFullYear() - new Date(dateStr).getFullYear();
-}
-
-function posterUrl(path, size) {
-    return "https://image.tmdb.org/t/p/" + size + path;
-}
-
-console.log("평균:", average(movies).toFixed(1));
-console.log("최고:", best(movies).title);
 console.log("8점 이상:", filterByRating(movies, 8).length + "편");
 
-const sorted = sortBy(movies);
+const sortByRating = list => {
+    return [...list].sort((a, b) => b.rating - a.rating);
+}
+const sorted = sortByRating(movies);
 console.log("정렬 1위:", sorted[0].title, "/ 원본 1번:", movies[0].title);
 
+const yearsSince = dateStr => {
+    return new Date().getFullYear() - new Date(dateStr).getFullYear();
+}
 console.log(yearsSince(movies[0].date) + "년 전 개봉");
+
+const posterUrl = (path, size) => {
+    return "https://image.tmdb.org/t/p/" + size + path;
+}
 console.log(posterUrl(movies[0].poster, "w342"));
 
+
+
+
 // renderCards : 영화 배열 ⇒ 보드에 카드 생성(반환값 없음)
-function renderCards(list) {
+const renderCards = list => {
     const board = document.querySelector(".board");
     board.innerHTML = "";
     for (const m of list) {
@@ -67,10 +67,10 @@ function renderCards(list) {
         document.querySelector("#count").textContent = list.length + "편";
     }
 }
-applySort();
+
 
 // sortBy : 영화 배열, 키 이름, 내림차순 여부 ⇒ 정렬한 새 배열(원본은 그대로)
-function sortBy(list, key, desc) {
+const sortBy = (list, key, desc) => {
     const copy = [...list];
     copy.sort((a, b) => {
         if (typeof a[key] === "string") return a[key].localeCompare(b[key]);
@@ -80,7 +80,9 @@ function sortBy(list, key, desc) {
     return copy;
 }
 // applySort : 선택 상자 값으로 정렬해서 다시 그리기(반환값 없음)
-function applySort() {
+const applySort = () => {
     const key = document.getElementById("sort").value;
     renderCards(sortBy(movies, key, key !== "title"));
 }
+
+applySort();
